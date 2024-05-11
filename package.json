@@ -1,0 +1,19 @@
+{
+  "name": "mc-queen-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx ./src/index.ts",
+    "start": "node ./dist/index.js",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "tsx": "^4.9.5",
+    "typescript": "^5.4.5"
+  }
+}
