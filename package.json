@@ -13,7 +13,12 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^20.12.11",
+    "@types/node-telegram-bot-api": "^0.64.6",
     "tsx": "^4.9.5",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.65.1"
   }
 }
