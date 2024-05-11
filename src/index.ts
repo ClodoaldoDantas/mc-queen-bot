@@ -11,6 +11,19 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, 'Katchau ⚡️')
 })
 
+/* Help */
+bot.onText(/\/help/, (msg) => {
+  const message = `
+  🚗💨 Available commands:
+  /quote - Get a random quote
+  /joke - Get a random joke
+  /start - Start the bot
+  /help - Display this help message
+  `
+
+  bot.sendMessage(msg.chat.id, message)
+})
+
 /* Send Quote */
 bot.onText(/\/quote/, async (msg) => {
   const quote = await fetchRandomQuote()
