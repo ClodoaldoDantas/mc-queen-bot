@@ -1,11 +1,12 @@
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
-import { fetchRandomQuote } from './services/fetch-random-quote'
+import { env } from './config/env'
 import { fetchRandomJoke } from './services/fetch-random-joke'
-import { messages } from './utils/messages'
+import { fetchRandomQuote } from './services/fetch-random-quote'
 import { commands } from './utils/commands'
+import { messages } from './utils/messages'
 
-const token = process.env.TELEGRAM_BOT_API as string
+const token = env.TELEGRAM_BOT_API
 const bot = new TelegramBot(token, { polling: true })
 
 /* Start Bot */
