@@ -1,1 +1,1 @@
-## 🤖 MC Queen BOT
+## 🤖 MC Queen
