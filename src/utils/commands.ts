@@ -4,4 +4,5 @@ export const commands = {
   quote: /\/quote/,
   joke: /\/joke/,
   dog: /\/dog/,
+  fox: /\/fox/,
 }

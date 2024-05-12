@@ -1,11 +1,12 @@
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
 import { env } from './config/env'
+import { fetchRandomDogPhoto } from './services/fetch-random-dog-photo'
+import { fetchRandomFoxPhoto } from './services/fetch-random-fox-photo'
 import { fetchRandomJoke } from './services/fetch-random-joke'
 import { fetchRandomQuote } from './services/fetch-random-quote'
 import { commands } from './utils/commands'
 import { messages } from './utils/messages'
-import { fetchRandomDogPhoto } from './services/fetch-random-dog-photo'
 
 const token = env.TELEGRAM_BOT_API
 const bot = new TelegramBot(token, { polling: true })
@@ -39,4 +40,10 @@ bot.onText(commands.dog, async (msg) => {
   if (data.status === 'success') {
     bot.sendPhoto(msg.chat.id, data.message)
   }
+})
+
+/* Send Fox Photo */
+bot.onText(commands.dog, async (msg) => {
+  const data = await fetchRandomFoxPhoto()
+  bot.sendPhoto(msg.chat.id, data.image)
 })
