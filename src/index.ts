@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
 import { env } from './config/env'
+import { fetchRandomAdvice } from './services/fetch-random-advice'
 import { fetchRandomDogPhoto } from './services/fetch-random-dog-photo'
 import { fetchRandomFoxPhoto } from './services/fetch-random-fox-photo'
 import { fetchRandomJoke } from './services/fetch-random-joke'
@@ -31,6 +32,12 @@ bot.onText(commands.quote, async (msg) => {
 bot.onText(commands.joke, async (msg) => {
   const data = await fetchRandomJoke()
   bot.sendMessage(msg.chat.id, data.joke)
+})
+
+/* Send Advice */
+bot.onText(commands.advice, async (msg) => {
+  const data = await fetchRandomAdvice()
+  bot.sendMessage(msg.chat.id, data.slip.advice)
 })
 
 /* Send Dog Photo */
