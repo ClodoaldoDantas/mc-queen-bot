@@ -5,6 +5,7 @@ import { fetchRandomJoke } from './services/fetch-random-joke'
 import { fetchRandomQuote } from './services/fetch-random-quote'
 import { commands } from './utils/commands'
 import { messages } from './utils/messages'
+import { fetchRandomDogPhoto } from './services/fetch-random-dog-photo'
 
 const token = env.TELEGRAM_BOT_API
 const bot = new TelegramBot(token, { polling: true })
@@ -29,4 +30,13 @@ bot.onText(commands.quote, async (msg) => {
 bot.onText(commands.joke, async (msg) => {
   const data = await fetchRandomJoke()
   bot.sendMessage(msg.chat.id, data.joke)
+})
+
+/* Send Dog Photo */
+bot.onText(commands.dog, async (msg) => {
+  const data = await fetchRandomDogPhoto()
+
+  if (data.status === 'success') {
+    bot.sendPhoto(msg.chat.id, data.message)
+  }
 })
