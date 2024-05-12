@@ -8,11 +8,13 @@ McQueen Bot é um bot do Telegram projetado para trazer diversão e utilidade ao
 ![image](https://github.com/ClodoaldoDantas/mc-queen-bot/assets/32376905/8d830149-37d7-43b4-91c6-006ce16b603e)
 
 ## 📁 Estrutura do Projeto
+
 ```
 📦src
  ┣ 📂config
  ┃ ┗ 📜env.ts
  ┣ 📂services
+ ┃ ┣ 📜fetch-current-weather.ts
  ┃ ┣ 📜fetch-random-advice.ts
  ┃ ┣ 📜fetch-random-dog-photo.ts
  ┃ ┣ 📜fetch-random-fox-photo.ts
@@ -24,7 +26,7 @@ McQueen Bot é um bot do Telegram projetado para trazer diversão e utilidade ao
  ┗ 📜index.ts
 ```
 
- ### 💻 Como executar o projeto
+### 💻 Como executar o projeto
 
 1. Certifique-se de ter o Node instalado na sua máquina.
 2. Clone o repositório.

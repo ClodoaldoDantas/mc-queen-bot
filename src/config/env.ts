@@ -3,6 +3,7 @@ import { z } from 'zod'
 
 const envSchema = z.object({
   TELEGRAM_BOT_API: z.string(),
+  OPEN_WEATHER_API_KEY: z.string(),
 })
 
 const _env = envSchema.safeParse(process.env)

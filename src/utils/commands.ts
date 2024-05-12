@@ -6,4 +6,5 @@ export const commands = {
   advice: /\/advice/,
   dog: /\/dog/,
   fox: /\/fox/,
+  weather: /\/weather/,
 }
