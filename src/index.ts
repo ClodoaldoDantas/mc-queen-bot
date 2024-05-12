@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
 import { env } from './config/env'
+import { fetchCurrentWeather } from './services/fetch-current-weather'
 import { fetchRandomAdvice } from './services/fetch-random-advice'
 import { fetchRandomDogPhoto } from './services/fetch-random-dog-photo'
 import { fetchRandomFoxPhoto } from './services/fetch-random-fox-photo'
@@ -53,4 +54,12 @@ bot.onText(commands.dog, async (msg) => {
 bot.onText(commands.fox, async (msg) => {
   const data = await fetchRandomFoxPhoto()
   bot.sendPhoto(msg.chat.id, data.image)
+})
+
+/* Send Current Weather */
+bot.onText(commands.weather, async (msg) => {
+  const data = await fetchCurrentWeather()
+  const message = `Weather in Fortaleza-CE: 🌡️ ${data.main.temp}°C`
+
+  bot.sendMessage(msg.chat.id, message)
 })
