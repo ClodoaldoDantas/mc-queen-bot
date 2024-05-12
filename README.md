@@ -5,7 +5,7 @@
 
 McQueen Bot é um bot do Telegram projetado para trazer diversão e utilidade ao seu servidor. Com recursos que vão desde geração de piadas até comandos de moderação, o McQueen Bot está aqui para aprimorar sua experiência no Telegram.
 
-![image](https://github.com/ClodoaldoDantas/mc-queen-bot/assets/32376905/8d830149-37d7-43b4-91c6-006ce16b603e)
+![image](https://github.com/ClodoaldoDantas/mc-queen-bot/assets/32376905/dd4d34bd-a7aa-40df-b81e-232be44cee8f)
 
 ## 📁 Estrutura do Projeto
 
