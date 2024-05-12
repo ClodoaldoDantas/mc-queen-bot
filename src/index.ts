@@ -43,7 +43,7 @@ bot.onText(commands.dog, async (msg) => {
 })
 
 /* Send Fox Photo */
-bot.onText(commands.dog, async (msg) => {
+bot.onText(commands.fox, async (msg) => {
   const data = await fetchRandomFoxPhoto()
   bot.sendPhoto(msg.chat.id, data.image)
 })

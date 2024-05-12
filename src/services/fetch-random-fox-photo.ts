@@ -9,6 +9,6 @@ interface FetchRandomFoxPhotoResponse {
  * @see {@link https://randomfox.ca/}
  */
 export async function fetchRandomFoxPhoto(): Promise<FetchRandomFoxPhotoResponse> {
-  const response = await axios.get('https://fox.ceo/api/breeds/image/random')
+  const response = await axios.get('https://randomfox.ca/floof/')
   return response.data
 }
